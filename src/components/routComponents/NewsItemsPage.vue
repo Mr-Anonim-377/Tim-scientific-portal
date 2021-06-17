@@ -12,6 +12,17 @@
         </div>
 
         <div v-html="transformHhtmlLinks(NEWS_TEXT.TEXT[0].text)"></div>
+
+        <!-- Видео -->
+        <!-- <iframe
+            width="1140"
+            height="642"
+            src="https://www.youtube.com/embed/0ly25OYC45M"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+        ></iframe> -->
     </section>
     <div v-else>
         <Preloader />
@@ -54,6 +65,7 @@
         },
 
         methods: {
+            /* Трансформируем ссылки в тексте */
             transformHhtmlLinks(string) {
                 return string
                     .split(' ')
@@ -76,6 +88,10 @@
 <style scoped>
     section {
         color: #3f7e77;
+    }
+
+    iframe {
+        margin: 50px 0;
     }
 
     .bannerSlider {
